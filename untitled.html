@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+	var nVer = navigator.appVersion;
+	var nAgt = navigator.userAgent;
+
+	function myFunction() {
+    	var str = nAgt.indexOf("Chrome")
+    	var res = nAgt.substring(str+7,str+11);
+    	document.getElementById("demo").innerHTML = res;
+	}
+
+	function browsername () {
+		// body...
+		var fullname;
+		if (nAgt.indexOf("Safari") != -1) {
+			if (nAgt.indexOf("Chrome") != -1 ) {
+				fullname = "Chrome"
+			}
+			else{
+				fullname = "Safari"
+			};
+		}
+		else if (nAgt.indexOf("Firefox") != -1){
+			fullname = "Firefox"
+		}
+
+		document.getElementById("demo").innerHTML = fullname;
+	}
+
+	</script>
+</head>
+<body>
+
+<p>
+	<script type="text/javascript">
+	document.write(nAgt);
+	</script>
+</p>
+
+<p>Click the button to extract characters from the string.</p>
+
+<button onclick="browsername()">Try it</button>
+
+<p id="demo"></p>
+
+</body>
+</html>

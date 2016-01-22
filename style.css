@@ -1,0 +1,338 @@
+/* reset */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: Helvetica, Arial, 'LiHei Pro', 'Noto Sans CJK', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;	
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 正文開始 */
+body {
+	margin: 0px;
+	background-color: #e9eaed;
+}
+
+header {
+	width: 100%;
+	height: 40px;
+	top:0px;
+	left: 0px;
+	background-color: #282828 ;
+}
+
+header p {
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	padding: 11px 12px;
+	margin: 0px ;
+}
+
+#full-screen {
+	position: absolute;
+	top : 40px;
+	width: 100%;
+}
+
+.clock {
+	position: absolute;
+	width: 20%;
+	left: 0px;
+	margin: 0px;
+}
+
+.from-left {
+	position: absolute;
+	right: 0px;
+	width: 120px;
+	margin-right: 15px;
+	animation: bounceInLeft 3s;
+}
+
+.clock h1 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin: 0px;
+	float: right;
+}
+.clock p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 26px;
+	padding-top: 15px;
+	float: right;
+}
+/*bounceInLeft 製作左移入動畫*/
+@keyframes bounceInLeft {
+
+  0% {
+  	/*透明度調整*/
+    opacity: 0;
+    -webkit-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-300px, 0, 0);
+  }
+
+  100% {
+  	opacity: 1;
+    -webkit-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+  }
+
+}
+/*bounceInLeft 製作左移入動畫結束*/
+
+.myself {
+	position: absolute;
+	left: 25%;
+	width: 25%;
+}
+
+.from-right {
+	margin-right: 15px;
+	animation: bounceInRight 3s;
+}
+
+.myself h1 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+}
+
+.myself p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	padding-top: 20px;
+	line-height: 22px;
+}
+
+/*bounceInLeft 製作左移入動畫*/
+@keyframes bounceInRight {
+
+  0% {
+  	/*透明度調整*/
+    opacity: 0;
+    -webkit-transform: translate3d(300px, 0, 0);
+    transform: translate3d(300px, 0, 0);
+  }
+
+  100% {
+  	opacity: 1;
+    -webkit-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+  }
+
+}
+/*bounceInLeft 製作左移入動畫結束*/
+
+.linear {
+	position: absolute;
+	top : 55px;
+	left: 22%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #fff;
+	border-radius: 2px;
+	width: 0px;
+	height: 500px;
+}
+
+/*網站超連結*/
+.link {
+	position: absolute;
+	left: 55%;
+	width: 200px;
+}
+
+.link a{
+	text-decoration: none;
+}
+
+.link p {
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-size: 18px;
+	padding: 18px 30px;
+	line-height: 22px;
+}
+
+.button {
+	background-color: #d34836;
+	height: 80px;
+	width: 300px;
+	margin-top: 100px;
+	margin-left: 0px;
+	border-radius: 5px;
+}
+
+.button:hover {
+	background-color: #3b5998;
+}
+
+/* black-linear */
+.black-linear {
+	position: absolute;
+	left: 80%;
+	width: 20%;
+	height: 500px;
+	background-color: #808080;
+}
+
+.black-linear h1 {
+	position: absolute;
+	top: 200px;
+	left: -50px;
+	transform: rotate(90deg);
+	width: 150px;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	color: #fff;
+}
+
+.black-linear p {
+	position: absolute;
+	top: 400px;
+	left: -75px;
+	transform: rotate(90deg);
+	width: 200px;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	color: #fff;
+}
+
+/*社交連結*/
+.social {
+	position: absolute;
+	top : 0px;
+	left: 60px;
+	background-color: #a6a6a6;
+	width: 700px;
+}
+
+.social h2 {
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-size: 24px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+img {
+	width: 40px;
+	height: 40px;
+	padding-left: 10px;
+	padding-top: 8px;
+	padding-right: 10px;
+	padding-bottom: 8px;
+	float: left;
+}
+
+.social h3 {
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-size: 20px;
+	padding-top: 20px;
+	float: left;
+}
+
+.facebook {
+	background-color: #3b5998;
+	height: 56px;
+	border: 2px #3b5998 solid;
+}
+
+.google-plus {
+	background-color: #d34836;
+	height: 56px;
+	border: 2px #d34836 solid;
+}
+
+.twitter {
+	background-color: #55acee;
+	height: 56px;
+	border: 2px #55acee solid;
+}
+
+.mail {
+	background-color: #29a329;
+	height: 56px;
+	border: 2px #29a329 solid;
+}
+
+.github {
+	background-color: #5900b3;
+	height: 56px;
+	border: 2px #5900b3 solid;
+}
+
+.blog {
+	background-color: #1aa3ff;
+	height: 56px;
+	border: 2px #1aa3ff solid;
+
+}
+
+.flickr {
+	background-color: #ff0084;
+	height: 56px;
+	border: 2px #ff0084 solid;
+}
+
+footer {
+	background-color: #282828 ;
+	height: 40px;
+
+}
+
+footer p {
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-size: 16px;
+	padding: 11px 12px;
+}
+#windows {
+	float: left;
+}
+#support {
+	float: right;
+}
