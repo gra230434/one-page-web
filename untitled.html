@@ -5,31 +5,24 @@
 
 	var nVer = navigator.appVersion;
 	var nAgt = navigator.userAgent;
+	var fullname = nAgt;
 
 	function browsername () {
-		// body...
 		var fullname;
-		if (nAgt.indexOf("Windows NT") != -1) {
-			var verOffset =nAgt.indexOf("re:")
-			if (nAgt.indexOf("Edge") != -1){
-				fullname ="EDGE"
+		if (nAgt.indexOf("Edge") != -1){
+				fullname ="EDGE";
 			}
-			else{
-				var version=nAgt.substring(verOffset+3)
-				frllname = "IE "+version
-			}
-		}
 		else{
 			if (nAgt.indexOf("Safari") != -1) {
 				if (nAgt.indexOf("Chrome") != -1 ) {
-					fullname = "Chrome"
+					fullname = "Chrome";
 				}
 				else{
-					fullname = "Safari"
+					fullname = "Safari";
 				};
 			}
 			else if (nAgt.indexOf("Firefox") != -1){
-				fullname = "Firefox"
+				fullname = "Firefox";
 			}
 		}
 
