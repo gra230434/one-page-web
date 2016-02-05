@@ -74,7 +74,7 @@ header p {
 
 .clock {
 	position: absolute;
-	width: 20%;
+	width: 27%;
 	left: 0px;
 	margin: 0px;
 }
@@ -82,22 +82,24 @@ header p {
 .from-left {
 	position: absolute;
 	right: 0px;
-	width: 120px;
-	margin-right: 15px;
+	width: 200px;
+	margin-right: 0px;
 	animation: bounceInLeft 3s;
 }
 
-.clock h1 {
+.from-left h1 {
+	position: absolute;
+	right: 0px;
 	font-family: 'Raleway', sans-serif;
 	font-size: 30px;
-	margin: 0px;
 	float: right;
 }
-.clock p {
+.from-left p {
+	position: absolute;
+	right: 0px;
+	top: 55px;
 	font-family: 'Raleway', sans-serif;
-	font-size: 26px;
-	padding-top: 15px;
-	float: right;
+	font-size: 40px;
 }
 /*bounceInLeft 製作左移入動畫*/
 @keyframes bounceInLeft {
@@ -120,23 +122,25 @@ header p {
 
 .myself {
 	position: absolute;
-	left: 25%;
-	width: 25%;
+	left: 33%;
+	width: 50%;
 }
 
 .from-right {
-	margin-right: 15px;
+	position: absolute;
 	animation: bounceInRight 3s;
 }
 
 .myself h1 {
 	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
 	font-size: 30px;
 }
 
 .myself p {
 	font-family: 'Raleway', sans-serif;
-	font-size: 16px;
+	font-weight: 600;
+	font-size: 18px;
 	padding-top: 20px;
 	line-height: 22px;
 }
@@ -163,7 +167,7 @@ header p {
 .linear {
 	position: absolute;
 	top : 55px;
-	left: 22%;
+	left: 30%;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #fff;
@@ -172,156 +176,90 @@ header p {
 	height: 500px;
 }
 
-/*網站超連結*/
-.link {
-	position: absolute;
-	left: 55%;
-	width: 200px;
-}
-
-.link a{
-	text-decoration: none;
-}
-
-.link p {
-	font-family: 'Raleway', sans-serif;
-	color: #fff;
-	font-size: 18px;
-	padding: 18px 30px;
-	line-height: 22px;
-}
-
-.button {
-	background-color: #d34836;
-	height: 80px;
-	width: 300px;
-	margin-top: 100px;
-	margin-left: 0px;
-	border-radius: 5px;
-}
-
-.button:hover {
-	background-color: #3b5998;
-}
-
-/* black-linear */
-.black-linear {
-	position: absolute;
-	left: 80%;
-	width: 20%;
-	height: 500px;
-	background-color: #808080;
-}
-
-.black-linear h1 {
-	position: absolute;
-	top: 200px;
-	left: -50px;
-	transform: rotate(90deg);
-	width: 150px;
-	margin: 0px;
-	padding: 0px;
-	font-family: 'Raleway', sans-serif;
-	font-size: 22px;
-	color: #fff;
-}
-
-.black-linear p {
-	position: absolute;
-	top: 400px;
-	left: -75px;
-	transform: rotate(90deg);
-	width: 200px;
-	margin: 0px;
-	padding: 0px;
-	font-family: 'Raleway', sans-serif;
-	font-size: 18px;
-	color: #fff;
-}
-
 /*社交連結*/
-.social {
+
+#social-circul-name {
 	position: absolute;
-	top : 0px;
-	left: 60px;
-	background-color: #a6a6a6;
-	width: 700px;
+	right: 0px;
+	bottom: 40px;
+	width: 20%;
+	height: 420px;
 }
 
-.social h2 {
+.social-box {
+	height: 60px;
+	width: 90%;
+	padding-right: 10%;
+}
+
+.social-box img{
+	float: right;
+	height: 35px;
+	width: 35px;
+	padding: 3px;
+	background-color: #505050;
+	border: 4px #FFFFFF solid;
+	border-radius: 50px;
+}
+
+.social-box h3{
 	font-family: 'Raleway', sans-serif;
-	color: #fff;
-	font-size: 24px;
-	padding-left: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	color: #0099ff;
+	font-weight: 900;
+	font-size: 16px;
+	padding-top: 25px;
+	padding-right: 20px;
+	float: right;
 }
 
-img {
-	width: 40px;
-	height: 40px;
-	padding-left: 10px;
-	padding-top: 8px;
-	padding-right: 10px;
-	padding-bottom: 8px;
-	float: left;
+/*social 動畫*/
+.blog-word{
+	animation: socialInleft 2.5s;
 }
-
-.social h3 {
-	font-family: 'Raleway', sans-serif;
-	color: #fff;
-	font-size: 20px;
-	padding-top: 20px;
-	float: left;
+.facebook-word{
+	animation: socialInleft 3s;
 }
-
-.facebook {
-	background-color: #3b5998;
-	height: 56px;
-	border: 2px #3b5998 solid;
+.google-word{
+	animation: socialInleft 3.5s;
 }
-
-.google-plus {
-	background-color: #d34836;
-	height: 56px;
-	border: 2px #d34836 solid;
+.twitter-word{
+	animation: socialInleft 4s;
 }
-
-.twitter {
-	background-color: #55acee;
-	height: 56px;
-	border: 2px #55acee solid;
+.github-word{
+	animation: socialInleft 4.5s;
 }
-
-.mail {
-	background-color: #29a329;
-	height: 56px;
-	border: 2px #29a329 solid;
+.flickr-word{
+	animation: socialInleft 5s;
 }
-
-.github {
-	background-color: #5900b3;
-	height: 56px;
-	border: 2px #5900b3 solid;
+.mail-word{
+	animation: socialInleft 5.5s;
 }
+@keyframes socialInleft {
 
-.blog {
-	background-color: #1aa3ff;
-	height: 56px;
-	border: 2px #1aa3ff solid;
+  0% {
+  	/*透明度調整*/
+    opacity: 0;
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0);
+  }
+  40% {
+  	/*透明度調整*/
+    opacity: 0;
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0);
+  }
+
+  100% {
+  	opacity: 1;
+    -webkit-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+  }
 
 }
-
-.flickr {
-	background-color: #ff0084;
-	height: 56px;
-	border: 2px #ff0084 solid;
-}
-
+/*腳步註解*/
 footer {
 	background-color: #282828 ;
 	height: 40px;
-
 }
 
 footer p {

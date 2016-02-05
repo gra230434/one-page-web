@@ -75,50 +75,49 @@ var browser=get_browser_info();
 	<div class="linear" id="linear"></div>
 
 	<div class="myself" id="myself">
-		<div class="from-right">
+		<div class="from-right" id="from-right">
 			<h1 id="myself_h1">Kevin Wei</h1>
 			<p>作為一個物理系未畢業的學生<br>我正努力的學習怎麼利用coding在這世界活下去<br>目前有涉獵的語言是<br>C++, Python, PHP, HTML, CSS, Javascript</p>
 			<p>想利用這樣一個頁面讓偶然踏入的你更加了解我<br>如果有什麼意見或是對我有什麼疑問歡迎聯絡我<br>當然如果你想交朋友也可以找我喔！</p>
 		</div>
 	</div>
 
-	<div class="black-linear" id="black-linear">
-		<img src="image/11.png">
-		<h1>Kevin Wei</h1>
-		<p>歡迎你來坐坐</p>
-		
-		<div class="social" id="social">
-			<h2>社交連結</h2>
-			<a href="https://technologyofkevin.com/" target="_blank">
-				<div class="blog" id="blog" onmouseover="OverBlog()" onmouseout="OutBlog()"><img src="image/wordpress.png"><h3>網際網路的世界</h3></div>
-			</a>
-
-			<a href="https://www.facebook.com/kevin.wei.coding" target="_blank">
-				<div class="facebook" id="facebook" onmouseover="Overfacebook()" onmouseout="Outfacebook()"><img src="image/ico_facebook.png"><h3>Facebook</h3></div>
-			</a>
-
-			<a href="https://plus.google.com/+%E9%9F%8B%E4%BD%B3%E5%9D%87" target="_blank">
-				<div class="google-plus" id="google-plus" onmouseover="Overgoogle()" onmouseout="Outgoogle()"><img src="image/ico_google_Plus.png"><h3>Google +</h3></div>
-			</a>
-
-			<a href="http://twitter.com/super_Kevin_Wei" target="_blank">
-				<div class="twitter" id="twitter" onmouseover="Overtwitter()" onmouseout="Outtwitter()"><img src="image/ico-twitter.png"><h3>Twutter</h3></div>
-			</a>
-
-			<a href="https://github.com/gra230434" target="_blank">
-				<div class="github" id="github" onmouseover="Overgithub()" onmouseout="Outgithub()"><img src="image/ico_github.png"><h3>Github</h3></div>
-			</a>
-
-			<a href="https://www.flickr.com/photos/115924484@N04" target="_blank">
-				<div class="flickr" id="flickr" onmouseover="Overflickr()" onmouseout="Outflickr()"><img src="image/flickr.png"><h3>Flickr</h3></div>
-			</a>
-
-			<a href="mailto:gra230434@gmail.com">
-				<div class="mail"><img src="image/ico_mail.png"><h3>Mail</h3></div>
-			</a>
-
-		</div>
-
+	<div class="social-circul" id="social-circul-name">
+		<a href="https://technologyofkevin.com/" target="_blank">
+			<div class="social-box" id="blog"><img src="image/wordpress.png">
+			<h3 class="blog-word">網際網路的世界</h3>
+			</div>
+		</a>
+		<a href="https://www.facebook.com/kevin.wei.coding" target="_blank">
+			<div class="social-box" id="facebook"><img class="facebook-img" src="image/ico_facebook.png">
+			<h3 class="facebook-word">Facebook</h3>
+			</div>
+		</a>
+		<a href="https://plus.google.com/+%E9%9F%8B%E4%BD%B3%E5%9D%87" target="_blank">
+			<div class="social-box" id="google-plus"><img src="image/ico_google_Plus.png">
+			<h3 class="google-word">Google +</h3>
+			</div>
+		</a>
+		<a href="http://twitter.com/super_Kevin_Wei" target="_blank">
+			<div class="social-box" id="twitter"><img src="image/ico-twitter.png">
+			<h3 class="twitter-word">Twitter</h3>
+			</div>
+		</a>
+		<a href="https://github.com/gra230434" target="_blank">
+			<div class="social-box" id="github"><img src="image/ico_github.png">
+			<h3 class="github-word">Github</h3>
+			</div>
+		</a>
+		<a href="https://www.flickr.com/photos/115924484@N04" target="_blank">
+			<div class="social-box" id="flickr"><img src="image/flickr.png">
+			<h3 class="flickr-word">Flickr</h3>
+			</div>
+		</a>
+		<a href="mailto:gra230434@gmail.com">
+			<div class="social-box" id="mail"><img src="image/ico_mail.png">
+			<h3 class="mail-word">Mail</h3>
+			</div>
+		</a>
 	</div>
 
 </div>
@@ -130,25 +129,16 @@ var browser=get_browser_info();
 
 
 <script type="text/javascript">
-
-//調整“現在時間“”自我介紹“位置
-	var half_height = Math.round(h/2)-90;
-	var myself_height = Math.round(h/2)-120;
-	document.getElementById("from-left").style.top = half_height+"px";
-	document.getElementById("myself_h1").style.paddingTop = myself_height+"px";
-
 //調整”fullscreen“高度，滿足單頁需求
-	var clock_height = h-80;
-	document.getElementById("full_screen").style.height = clock_height+"px";
-	document.getElementById("social").style.height = clock_height+"px";
-	document.getElementById("black-linear").style.height = clock_height+"px";
+	var full_screen_height = h-80;
+	var from_left = h/3;
+	var from_right = h/100*30;
+	document.getElementById("full_screen").style.height = full_screen_height+"px";
+	document.getElementById("from-left").style.top = from_left+"px";
+	document.getElementById("from-right").style.top = from_right+"px";
 
 	var linear_height = h-110;
 	document.getElementById("linear").style.height = linear_height+"px";
-
-//調整"Social"寬度
-	var social_width = Math.round(w*20/100)-60;
-	document.getElementById("social").style.width = social_width+"px";
 
 //顯示瀏覽器資料
 	document.getElementById("support").innerHTML = "您目前使用的是:"+browser.name+" 建議使用chrome firefox safari";
@@ -172,7 +162,7 @@ var browser=get_browser_info();
     	};
     }
 
-// 每一秒載入一次
+// 每一分鐘載入一次
 	var myVar = setInterval(myTimer_ver1, 60000);
 
 	function myTimer_ver1() {
