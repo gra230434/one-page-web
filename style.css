@@ -192,6 +192,15 @@ header p {
 	padding-right: 10%;
 }
 
+.social-box a{
+	text-decoration:none;
+	color: #4db8ff;
+}
+
+.social-box a:hover{
+	color: #0099ff;
+}
+
 .social-box img{
 	float: right;
 	height: 35px;
@@ -204,8 +213,7 @@ header p {
 
 .social-box h3{
 	font-family: 'Raleway', sans-serif;
-	color: #0099ff;
-	font-weight: 900;
+	font-weight: 500;
 	font-size: 16px;
 	padding-top: 25px;
 	padding-right: 20px;
