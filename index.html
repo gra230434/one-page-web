@@ -35,15 +35,15 @@
 	function Outflickr() {document.getElementById("flickr").style.background = "#ff0084";}
 
 function get_browser_info(){
-    var ua=navigator.userAgent,tem,M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []; 
+    var ua=navigator.userAgent,tem,M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
     if(/trident/i.test(M[1])){
-        tem=/\brv[ :]+(\d+)/g.exec(ua) || []; 
+        tem=/\brv[ :]+(\d+)/g.exec(ua) || [];
         return {name:'IE ',version:(tem[1]||'')};
-        }  
+        }
     if(M[1]==='Chrome'){
         tem=ua.match(/\bOPR\/(\d+)/)
         if(tem!=null)   {return {name:'Opera', version:tem[1]};}
-        }   
+        }
     M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
     if((tem=ua.match(/version\/(\d+)/i))!=null) {M.splice(1,1,tem[1]);}
     return {
@@ -53,18 +53,19 @@ function get_browser_info(){
 }
 
 var browser=get_browser_info();
-
 	</script>
 </head>
 
 <body>
 
-<header class="header">
-	<p>這是一個原創且用程式刻出來的網頁 他將指引前往不同的頁面</p>
-</header>
+<div id="IndexHeader" class="IndexHeader">
+  <header class="header">
+	  <p>這是一個原創且用程式刻出來的網頁 他將指引前往不同的頁面</p>
+  </header>
+</div>
 
 <div class="full_screen" id="full_screen">
-	
+
 	<div class="clock" id="clock">
 		<div class="from-left" id="from-left">
 			<h1 id="now-time">現在時間</h1>
@@ -87,33 +88,33 @@ var browser=get_browser_info();
 		<a href="https://technologyofkevin.com/" target="_blank"><img src="image/wordpress.png"></a>
 		<h3 class="blog-word"><a href="https://technologyofkevin.com/" target="_blank">網際網路的世界</a></h3>
 		</div>
-		
+
 		<div class="social-box" id="facebook">
 		<a href="https://www.facebook.com/kevin.wei.coding" target="_blank"><img class="facebook-img" src="image/ico_facebook.png"></a>
 		<a href="https://www.facebook.com/kevin.wei.coding" target="_blank"><h3 class="facebook-word">Facebook</h3></a>
 		</div>
-		
+
 		<div class="social-box" id="google-plus">
 		<a href="https://plus.google.com/+%E9%9F%8B%E4%BD%B3%E5%9D%87" target="_blank"><img src="image/ico_google_Plus.png"></a>
 		<a href="https://plus.google.com/+%E9%9F%8B%E4%BD%B3%E5%9D%87" target="_blank"><h3 class="google-word">Google +</h3></a>
 		</div>
-		
+
 		<div class="social-box" id="twitter">
 		<a href="http://twitter.com/super_Kevin_Wei" target="_blank"><img src="image/ico-twitter.png"></a>
 		<a href="http://twitter.com/super_Kevin_Wei" target="_blank"><h3 class="twitter-word">Twitter</h3></a>
 		</div>
-		
+
 		<div class="social-box" id="github">
 		<a href="https://github.com/gra230434" target="_blank"><img src="image/ico_github.png"></a>
 		<a href="https://github.com/gra230434" target="_blank"><h3 class="github-word">Github</h3></a>
 		</div>
-		
+
 		<div class="social-box" id="flickr">
 		<a href="https://www.flickr.com/photos/115924484@N04" target="_blank"><img src="image/flickr.png"></a>
 		<a href="https://www.flickr.com/photos/115924484@N04" target="_blank"><h3 class="flickr-word">Flickr</h3></a>
 		</div>
-		
-		
+
+
 		<div class="social-box" id="mail">
 		<a href="mailto:gra230434@gmail.com"><img src="image/ico_mail.png"></a>
 		<a href="mailto:gra230434@gmail.com"><h3 class="mail-word">Mail</h3></a>
@@ -121,11 +122,12 @@ var browser=get_browser_info();
 	</div>
 </div>
 
-<footer>
-	<p id="windows"></p>
-	<p id="support"></p>
-</footer>
-
+<div id="IndexFooter" class="IndexFooter">
+	<footer>
+		<p id="windows"></p>
+		<p id="support"></p>
+	</footer>
+</div>
 
 <script type="text/javascript">
 //調整”fullscreen“高度，滿足單頁需求
@@ -167,10 +169,10 @@ var browser=get_browser_info();
 	function myTimer_ver1() {
     	var d = new Date();
     	var am_pm = "";
-    	
+
     	if (d.getHours()>12) { am_pm = "PM"; }
     	else { am_pm = "AM"; };
-    	
+
     	if (d.getHours()<10){
     	if (d.getMinutes()<10) {
     		document.getElementById("clock_ver1").innerHTML = am_pm+" 0"+d.getHours()+":0"+d.getMinutes();
