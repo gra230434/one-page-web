@@ -56,6 +56,9 @@ h3 {
 p, td {
 	font-size: 20px;
 }
+p {
+	line-height: 28px;
+}
 table {
 	margin: 20px 0px;
 }
@@ -302,11 +305,11 @@ body {
 /* ----------------------------------------------------- */
 .autobiography {
 	width: 1020px;
-	margin: 0px auto;
+	margin: 150px auto;
 }
 .myname {
 	height: 40px;
-	margin: 70px 0px 30px;
+	margin: 0px 0px 30px;
 	border-bottom: 1px blue solid;
 }
 .myname h1, .myname p{
