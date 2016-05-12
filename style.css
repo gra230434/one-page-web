@@ -43,7 +43,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 h1 {
 	font-size: 36px;
 }
@@ -54,14 +53,26 @@ h3 {
 	font-size: 24px;
 }
 h4 {
-	font-size: 18px;
+	font-size: 20px;
 }
 p {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 28px;
 }
 table {
 	margin: 20px 0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover, a:visited:hover {
+  color: #4C4C4C;
+	border-bottom: 2px #4c4c4c solid;
+}
+a:active {
+}
+a:visited {
+  color: #000;
 }
 /* 正文開始 */
 body {
@@ -293,7 +304,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	color: #fff;
 	font-size: 16px;
-	padding: 11px 12px;
+	padding: 11px 12px 0;
 }
 #windows {
 	float: left;
@@ -308,29 +319,103 @@ body {
 	width: 1020px;
 	margin: 150px auto;
 }
+.header_image {
+	width: 100%;
+	height: 660px;
+	position: relative;
+}
+.header_image img {
+	height: 595px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 .myname {
-	height: 40px;
-	margin: 0px 0px 30px;
-	border-bottom: 1px blue solid;
+	height: 660px;
+	width: 700px;
+	background-color: rgba(154, 95, 5, 0.86);
+	position: absolute;
+	top: 0;
+	left: 0;
 }
-.myname h1, .myname p{
-	float: left;
+.myname_triangle {
+	border-color: transparent transparent rgba(154, 95, 5, 0.86) rgba(154, 95, 5, 0.86);
+  border-style: solid solid solid solid;
+
+  /* 設定邊框（上、下；左、右）大小相同的數值，可拼湊出任意形狀的三角形 */
+  border-width: 0 100px 660px 0;
+
+  /* 設定 width、height 可更好理解原理 */
+  height: 0px;
+  width: 0px;
+
+	position: absolute;
+	top: 0;
+	left: 700px;
 }
-.myname p {
+.myname_text {
+	width: 300px;
+  color: #fff;
+	position: absolute;
+	bottom: 200px;
+	left: 280px;
+}
+.myname_text h1, .myname_text p{
+	float: right;
+}
+.myname_text p {
 	margin-top: 14px;
 	margin-left: 20px;
 }
+.gohome {
+	position: absolute;
+	bottom: 20px;
+	right: 40px;
+}
 .TableMyself {
 	margin: 30px 0px;
+}
+table {
+	background-color: #ccc;
+	border: #ccc 1px solid;
+  border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+  border-collapse: separate;
+}
+th {
+  border-color: rgba(0, 0, 0, 0.1);
 }
 th, td {
 	font-size: 16px;
   padding: 5px;
 	line-height: 1.5;
 }
-table tr:nth-child(even) {
-    background-color: #eee;
+table tr.even td {
+    background-color: #fff;
 }
-table tr:nth-child(odd) {
-   background-color:#fff;
+table tr.odd td {
+   background-color:#eee;
+}
+.collections {
+	width:100%;
+}
+.MyCollection {
+	height: 720px;
+}
+.collections ul li {
+	width:50%;
+	float:left;
+}
+.collectionsBOX {
+	margin:10px;
+	padding:20px;
+	height:300px;
+}
+.collectionsBOX img {
+	margin-top: 15px;
+	box-shadow: 3px 3px 10px #676565;
+}
+#my_github_icon {
+	margin: 15px auto;
+	box-shadow: 0px 0px 0px #676565;
 }

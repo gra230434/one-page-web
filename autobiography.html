@@ -11,17 +11,23 @@
 
 <div id="IndexHeader" class="IndexHeader">
   <header class="header">
-	   <p>Autobiography 專屬我個人的自傳，目前專屬於 Hope Bay Technologies, Inc.</p>
-   </header>
+    <p>Autobiography 專屬我個人的自傳，目前專屬於 Hope Bay Technologies, Inc.</p>
+  </header>
+</div>
+
+<div class="header_image">
+	<img src="image/aboutmeshare.jpg">
+	<div id="myname" class="myname">
+		<div id="myname_text" class="myname_text">
+		  <h1>韋佳均</h1>
+		  <p>這是我在世界上存在的證明</p>
+		</div>
+	</div>
+	<div class="myname_triangle"></div>
+	<div class="gohome"><a href="http://www.technologyofkevin.com/"><h4>返回首頁</h4></a></div>
 </div>
 
 <article id="autobiography-hopebay" class="autobiography">
-  <header>
-    <div id="myname" class="myname">
-      <h1>韋佳均</h1>
-      <p>這是我在世界上存在的證明</p>
-    </div>
-  </header>
 
   <div id="educational" class="educational TableMyself">
     <h2>學歷</h2>
@@ -32,7 +38,7 @@
         <th style="width: 25%">系所</th>
         <th style="width: 50%">就讀日期</th>
       </tr>
-      <tr>
+      <tr class="even">
         <td>國立中央大學</td>
         <td>物理學系</td>
         <td>2011/09 - now</td>
@@ -43,20 +49,20 @@
 
   <div id="experience" class="experience TableMyself">
     <h2>經歷</h2>
-    <table style="width: 100%">
+    <table style="width:100%">
       <tr>
         <th style="width: 15%">公司</th>
         <th style="width: 15%">職務</th>
         <th style="width: 20%">工作日期</th>
         <th style="width: 50%">工作簡歷</th>
       </tr>
-      <tr>
+      <tr class="even">
         <td>和沛科技</td>
         <td>QA 約聘人員</td>
         <td>2014/11 - now</td>
         <td>在公司產品ArkEase Pro上負責手動測試</td>
       </tr>
-      <tr>
+      <tr class="odd">
         <td>中央物理系</td>
         <td>網頁開發人員</td>
         <td>2013/11 - now</td>
@@ -76,28 +82,26 @@
           <th style="width: 15%">時間</th>
           <th style="width: 65%">內容</th>
         </tr>
-        <tr>
-          <td>
-						全國高中生物理科學研習營<br>課程組組員
-					</td>
+        <tr class="even">
+          <td>全國高中生物理科學研習營<br>課程組組員</td>
           <td>2011/10 - 2012/07</td>
           <td>在研習營期間編寫講義，製作教學道具，創造全新的物理實驗，邀請教授演講，與實驗室接洽開放時間。</td>
         </tr>
-        <tr>
+        <tr class="odd">
           <td>
 						<div>全校社團幹部訓練營<br>副執行長</div>
 					</td>
           <td>2012/11 - 2013/08</td>
           <td>以向全校社團新任幹部進行訓練及指導，帶領13位同學，完成4天3夜營隊以及帶領130為學弟妹的任務。</td>
         </tr>
-        <tr>
+        <tr  class="even">
           <td>
 						<div>物理學系網路管理<br>工讀生</div>
 					</td>
           <td>2011/09 - 2013/08</td>
           <td>服務全系網路，學習管理伺服器，架設DNS server, WWW server，學習網站語言 HTML CSS PHP，學習使用 Linux, docker</td>
         </tr>
-        <tr>
+        <tr class="odd">
           <td>
 						<div>物理學系網路管理<br>負責人</div>
 					</td>
@@ -106,35 +110,37 @@
         </tr>
       </table>
     </div><!-- .activities -->
-		<div class="collections" style="width:100%">
+
+		<div class="collections">
 			<h3>作品集</h3>
-			<div style="margin:15px auto;">
+			<div class="TableMyself MyCollection">
 				<ul>
-					<li style="width:50%;float:left;">
-						<div style="margin:10px;padding:20px;background-color:#fff;">
+					<li>
+						<div class="collectionsBOX" style="background: radial-gradient(circle at bottom right, transparent 20px, #fff 0) bottom right;">
 						  <h4>第一個wordpress網站</h4>
               <img src="image/demo_wordpress.png" style="width:100%;">
-					  </div>
+					  </div><!-- .collectionsBOX -->
 					</li>
-
-					<li style="width:50%;float:left;">
-					  <div style="margin:10px;padding:20px;background-color:#fff;">
+					<li>
+					  <div class="collectionsBOX" style="background: radial-gradient(circle at bottom left, transparent 20px, #fff 0) bottom left;">
 						  <h4>純HTML+JS網站設計</h4>
-						</div>
+							<img src="image/demo_html.png" style="width:100%;">
+						</div><!-- .collectionsBOX -->
 					</li>
-
-					<li style="width:50%;float:left;">
-						<div style="margin:10px;padding:20px;background-color:#fff;">
+					<li>
+						<div class="collectionsBOX" style="background: radial-gradient(circle at top right, transparent 20px, #fff 0) top right;">
 						  <h4>AMS實驗室網頁設計</h4>
-						</div>
+							<img src="image/demo_ams.png" style="width:100%;">
+						</div><!-- .collectionsBOX -->
 					</li>
-
-					<li style="width:50%;float:left;">
-						<div style="margin:10px;padding:20px;background-color:#fff;">
-						  <h4>github程式展示</h4>
-						</div>
+					<li>
+						<div class="collectionsBOX" style="background: radial-gradient(circle at top left, transparent 20px, #fff 0) top left;">
+						  <h4>github程式分享</h4>
+							<div style="width:230px;margin:0 auto">
+							  <img id="my_github_icon" onmouseover="MyGit_ON(this)" onmouseout="MyGit_OUT(this)" src="image/github.svg" style="width:230px;">
+						  </div>
+						</div><!-- .collectionsBOX -->
 					</li>
-
 				</ul>
 			</div>
 		</div><!-- .collections -->
@@ -154,6 +160,10 @@
   </footer>
 </div>
 
+<script>
+function MyGit_ON(x) { x.src = "image/github_on.svg" }
+function MyGit_OUT(x) { x.src = "image/github.svg" }
+</script>
 
 </body>
 </html>
