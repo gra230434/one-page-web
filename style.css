@@ -18,7 +18,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: Helvetica, Arial, 'LiHei Pro', 'Noto Sans CJK', sans-serif;
+	font-family: "Microsoft JhengHei",Helvetica, Arial, 'LiHei Pro', 'Noto Sans CJK', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -62,8 +62,9 @@ p {
 table {
 	margin: 20px 0px;
 }
-a {
+a, a h4 {
 	text-decoration: none;
+	color: #808080;
 }
 a:hover, a:visited:hover {
   color: #4C4C4C;
@@ -328,6 +329,8 @@ body {
 	height: 500px;
 	overflow: hidden;
 	position: relative;
+	top: 0;
+	right: 0;
 }
 #header_BackgroundImage img {
   position: absolute;
@@ -336,19 +339,19 @@ body {
 }
 .myname {
 	height: 560px;
-	width: 40%;
+	width: 35%;
 	background-color: rgb(0, 131, 224);
 	position: relative;
 	top: -500px;
+	transition: width 0.5s;
+}
+.myname:hover {
+	width: 40%;
 }
 .myname::after {
 	border-color: transparent transparent rgb(0, 131, 224) rgb(0, 131, 224);
   border-style: solid solid solid solid;
-
-  /* 設定邊框（上、下；左、右）大小相同的數值，可拼湊出任意形狀的三角形 */
   border-width: 0 200px 560px 0;
-
-  /* 設定 width、height 可更好理解原理 */
   height: 0px;
   width: 0px;
   content: '';
@@ -371,32 +374,47 @@ body {
 	margin-left: 20px;
 }
 .gohome {
-	position: absolute;
-	bottom: -50px;
+	position: relative;
+	top: -550px;
+	left: 55%;
 	color: #4c4c4c;
-	left: calc(300px + 40%);
+	background-color: #e48c09;
+  height: 40px;
+  width: 45%;
+}
+.gohome::before {
+	content: '';
+	border-color:  transparent #e48c09 transparent #e48c09;
+  border-style: solid solid solid solid;
+  border-width: 0 15px 40px 0;
+	position: absolute;
+	top: 0;
+	left: -15px;
+	height: 0px;
+  width: 0px;
 }
 .gohome ul {
-	margin: 0;
+	margin: 0 20px 0;
   padding: 0;
   overflow: hidden;
 }
 .gohome ul li{
 	float: left;
-		border-radius: 5px;
+  border-radius: 5px;
 }
 .gohome ul li a{
 	display: block;
   text-align: center;
 	font-size: 20px;
+	color: #ffefb6;
   padding: 10px 16px;
 }
-.gohome ul li a:hover:not(.action){
-	background-color: #111;
-	color: #fff;
+.gohome ul li a:hover:not(.action) {
+	background-color: #ffa31b;
 }
 .gohome .action {
-	background-color: rgb(0, 131, 224);
+	background-color: rgb(231, 101, 19);
+	color: #ffd800;
 }
 .TableMyself {
 	margin: 70px 0px 30px;

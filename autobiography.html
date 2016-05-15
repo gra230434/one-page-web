@@ -9,19 +9,15 @@
 	$(document).ready(function() {
     var movementStrength = 30;
     var height = movementStrength / $("#header_image").height() * -1;
-		console.log( height );
 		var HalfHeight = $("#header_image").height() / 2;
-		console.log( HalfHeight );
     var width = movementStrength / $("#header_image").width() * -1;
 		var HalfWidth = $("#header_image").width() / 2;
-		console.log( HalfWidth );
-    $("#header_image").mousemove(function(event){
+    $("#header_BackgroundImage").mousemove(function(event){
 		  var pageX = event.pageX - HalfWidth;
 		  var pageY = event.pageY - HalfHeight;
 		  var newvalueX = width * pageX - 20;
 		  var newvalueY = height * pageY - 20;
-		  $('#header_BackIMG').css('top', newvalueY);
-			$('#header_BackIMG').css('right', newvalueX);
+		  $('#header_BackIMG').css({'top': newvalueY,'right': newvalueX});
     });
   });
 	</script>
@@ -54,7 +50,8 @@
 </div>
 
 <article id="autobiography-hopebay" class="autobiography">
-
+  <img src="image/auto_image.png" style="float:right;width:250px;margin:0 30px;border:3px #909090 solid;border-radius:5px">
+	<div style="height: 100px;"></div>
   <div id="educational" class="educational TableMyself">
     <h2>學歷</h2>
 		<div id="line"></div>
