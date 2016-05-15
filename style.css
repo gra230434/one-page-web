@@ -67,7 +67,6 @@ a {
 }
 a:hover, a:visited:hover {
   color: #4C4C4C;
-	border-bottom: 2px #4c4c4c solid;
 }
 a:active {
 }
@@ -317,48 +316,52 @@ body {
 /* ----------------------------------------------------- */
 .autobiography {
 	width: 1020px;
-	margin: 150px auto;
+	margin: 150px auto 100px;
 }
 .header_image {
 	width: 100%;
-	height: 660px;
+	height: 500px;
 	position: relative;
 }
-.header_image img {
-	height: 595px;
-	position: absolute;
-	top: 0;
-	right: 0;
+#header_BackgroundImage {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+}
+#header_BackgroundImage img {
+  position: absolute;
+	top: -20px;
+	right: -20px;
 }
 .myname {
-	height: 660px;
-	width: 700px;
-	background-color: rgba(154, 95, 5, 0.86);
-	position: absolute;
-	top: 0;
-	left: 0;
+	height: 560px;
+	width: 40%;
+	background-color: rgb(0, 131, 224);
+	position: relative;
+	top: -500px;
 }
-.myname_triangle {
-	border-color: transparent transparent rgba(154, 95, 5, 0.86) rgba(154, 95, 5, 0.86);
+.myname::after {
+	border-color: transparent transparent rgb(0, 131, 224) rgb(0, 131, 224);
   border-style: solid solid solid solid;
 
   /* 設定邊框（上、下；左、右）大小相同的數值，可拼湊出任意形狀的三角形 */
-  border-width: 0 100px 660px 0;
+  border-width: 0 200px 560px 0;
 
   /* 設定 width、height 可更好理解原理 */
   height: 0px;
   width: 0px;
-
+  content: '';
 	position: absolute;
 	top: 0;
-	left: 700px;
+	right: -200px;
 }
 .myname_text {
 	width: 300px;
   color: #fff;
 	position: absolute;
 	bottom: 200px;
-	left: 280px;
+	right: 10%;
 }
 .myname_text h1, .myname_text p{
 	float: right;
@@ -369,11 +372,34 @@ body {
 }
 .gohome {
 	position: absolute;
-	bottom: 20px;
-	right: 40px;
+	bottom: -50px;
+	color: #4c4c4c;
+	left: calc(300px + 40%);
+}
+.gohome ul {
+	margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.gohome ul li{
+	float: left;
+		border-radius: 5px;
+}
+.gohome ul li a{
+	display: block;
+  text-align: center;
+	font-size: 20px;
+  padding: 10px 16px;
+}
+.gohome ul li a:hover:not(.action){
+	background-color: #111;
+	color: #fff;
+}
+.gohome .action {
+	background-color: rgb(0, 131, 224);
 }
 .TableMyself {
-	margin: 30px 0px;
+	margin: 70px 0px 30px;
 }
 table {
 	background-color: #ccc;
@@ -400,16 +426,78 @@ table tr.odd td {
 	width:100%;
 }
 .MyCollection {
+	margin: 15px 0;
 	height: 720px;
 }
+.resume_table {
+	margin-top: 30px;
+}
 .collections ul li {
-	width:50%;
+	width: calc(50% - 40px);
+	height: 320px;
+	margin: 20px;
 	float:left;
 }
 .collectionsBOX {
-	margin:10px;
-	padding:20px;
-	height:300px;
+  width: 100%;
+	height: 100%;
+	position: relative;
+}
+.collectionsPost {
+	padding: 20px;
+	width: calc(100% - 40px);
+	height: calc(100% - 40px);
+	position: absolute;
+	transition: all 0.5s ease-in-out;
+}
+.collectionsblack {
+  width: 50px;
+  height: 50px;
+	transition: all 0.5s ease-in-out;
+}
+.collectionsblack_top {
+	border-top: 270px #c5c5c5 solid;
+}
+.collectionsblack_bottom {
+	border-bottom: 270px #c5c5c5 solid;
+}
+.collectionsblack_left {
+	border-left: 420px #c5c5c5 solid;
+}
+.collectionsblack_right {
+	border-right: 420px #c5c5c5 solid;
+}
+.collections_1 {
+	background: radial-gradient(circle at bottom right, transparent 20px, #fff 0) bottom right;
+	top: 0;
+	left: 0;
+}
+.collections_2 {
+	background: radial-gradient(circle at bottom left, transparent 20px, #fff 0) bottom left;
+	top: 0;
+	right: 0;
+}
+.collections_3 {
+	background: radial-gradient(circle at top right, transparent 20px, #fff 0) bottom left;
+	top: 0;
+	right: 0;
+}
+.collections_4 {
+	background: radial-gradient(circle at top left, transparent 20px, #fff 0) bottom left;
+	top: 0;
+	right: 0;
+}
+.collectionsBOX:hover .collections_1, .collectionsBOX:hover .collection_4 {
+  transform: translate(15px,15px);
+}
+.collectionsBOX:hover .collections_2, .collectionsBOX:hover .collection_3 {
+  transform: translate(-15px,15px);
+}
+.collectionsBOX:hover .collections_3, .collectionsBOX:hover .collection_2 {
+  transform: translate(15px,-15px);
+}
+.collectionsBOX:hover .collections_4, .collectionsBOX:hover .collection_1  {
+  transform: translate(-15px,-15px);
 }
 .collectionsBOX img {
 	margin-top: 15px;
@@ -418,4 +506,11 @@ table tr.odd td {
 #my_github_icon {
 	margin: 15px auto;
 	box-shadow: 0px 0px 0px #676565;
+}
+#line {
+	width: 60%;
+	height: 3px;
+	background: linear-gradient(to right, rgb(0, 167, 255) , rgba(0, 167, 255, 0));
+	margin: 10px 0 15px;
+	border-radius: 10%;
 }

@@ -5,32 +5,59 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+	$(document).ready(function() {
+    var movementStrength = 30;
+    var height = movementStrength / $("#header_image").height() * -1;
+		console.log( height );
+		var HalfHeight = $("#header_image").height() / 2;
+		console.log( HalfHeight );
+    var width = movementStrength / $("#header_image").width() * -1;
+		var HalfWidth = $("#header_image").width() / 2;
+		console.log( HalfWidth );
+    $("#header_image").mousemove(function(event){
+		  var pageX = event.pageX - HalfWidth;
+		  var pageY = event.pageY - HalfHeight;
+		  var newvalueX = width * pageX - 20;
+		  var newvalueY = height * pageY - 20;
+		  $('#header_BackIMG').css('top', newvalueY);
+			$('#header_BackIMG').css('right', newvalueX);
+    });
+  });
+	</script>
 </head>
 
 <body>
 
 <div id="IndexHeader" class="IndexHeader">
   <header class="header">
-    <p>Autobiography 專屬我個人的自傳，目前專屬於 Hope Bay Technologies, Inc.</p>
+    <p>Record 專屬我個人的履歷，目前專屬於 Hope Bay Technologies, Inc.</p>
   </header>
 </div>
 
-<div class="header_image">
-	<img src="image/aboutmeshare.jpg">
+<div id="header_image" class="header_image">
+	<div id="header_BackgroundImage">
+    <img id="header_BackIMG" src="image/aboutmeshare.jpg">
+	</div>
 	<div id="myname" class="myname">
 		<div id="myname_text" class="myname_text">
 		  <h1>韋佳均</h1>
 		  <p>這是我在世界上存在的證明</p>
 		</div>
 	</div>
-	<div class="myname_triangle"></div>
-	<div class="gohome"><a href="http://www.technologyofkevin.com/"><h4>返回首頁</h4></a></div>
+	<div class="gohome">
+    <ul>
+	  	<li><a href="http://www.technologyofkevin.com/" class="nava-1">返回</a></li>
+	  	<li><a href="http://www.technologyofkevin.com/" class="nava-2 action">履歷</a></li>
+	  </ul>
+  </div>
 </div>
 
 <article id="autobiography-hopebay" class="autobiography">
 
   <div id="educational" class="educational TableMyself">
     <h2>學歷</h2>
+		<div id="line"></div>
 		<div id="table-1" class="table-1" style="width: 60%">
     <table>
       <tr>
@@ -49,18 +76,19 @@
 
   <div id="experience" class="experience TableMyself">
     <h2>經歷</h2>
+		<div id="line"></div>
     <table style="width:100%">
       <tr>
-        <th style="width: 15%">公司</th>
-        <th style="width: 15%">職務</th>
-        <th style="width: 20%">工作日期</th>
-        <th style="width: 50%">工作簡歷</th>
+        <th style="width: 10%">公司</th>
+        <th style="width: 13%">職務</th>
+        <th style="width: 15%">工作日期</th>
+        <th style="width: 72%">工作簡歷</th>
       </tr>
       <tr class="even">
         <td>和沛科技</td>
         <td>QA 約聘人員</td>
         <td>2014/11 - now</td>
-        <td>在公司產品ArkEase Pro上負責手動測試</td>
+        <td>在公司產品 ArkEase Pro 上負責手動測試</td>
       </tr>
       <tr class="odd">
         <td>中央物理系</td>
@@ -73,8 +101,8 @@
 
   <div id="resume" class="resume TableMyself">
     <h2>自傳</h2>
-
-    <div class="activities">
+    <div id="line"></div>
+    <div class="activities resume_table">
       <h3>課外活動簡歷</h3>
       <table>
         <tr>
@@ -109,41 +137,61 @@
           <td>服務全系網路，參與全校網路小組，負責與計算中心協助網路服務，且已wordpress為基底，多次幫教授架設實驗室網站</td>
         </tr>
       </table>
-    </div><!-- .activities -->
+    </div><!-- .activities .resume_table -->
 
-		<div class="collections">
+		<div class="collections resume_table">
 			<h3>作品集</h3>
-			<div class="TableMyself MyCollection">
+			<div class="MyCollection">
 				<ul>
 					<li>
-						<div class="collectionsBOX" style="background: radial-gradient(circle at bottom right, transparent 20px, #fff 0) bottom right;">
-						  <h4>第一個wordpress網站</h4>
-              <img src="image/demo_wordpress.png" style="width:100%;">
-					  </div><!-- .collectionsBOX -->
+						<div class="collectionsBOX">
+						  <div class="collectionsblack collectionsblack_top collectionsblack_left collection_1"></div>
+						  <a href="https://technologyofkevin.com/">
+						    <div class="collectionsPost collections_1">
+						      <h4>第一個wordpress網站</h4>
+                  <img src="image/demo_wordpress.png" style="width:100%;">
+						    </div><!-- .collectionsBOX -->
+						  </a>
+						</div>
 					</li>
 					<li>
-					  <div class="collectionsBOX" style="background: radial-gradient(circle at bottom left, transparent 20px, #fff 0) bottom left;">
-						  <h4>純HTML+JS網站設計</h4>
-							<img src="image/demo_html.png" style="width:100%;">
-						</div><!-- .collectionsBOX -->
+						<div class="collectionsBOX">
+						  <div class="collectionsblack collectionsblack_top collectionsblack_right collection_2"></div>
+						  <a href="http://www.technologyofkevin.com/">
+						    <div class="collectionsPost collections_2">
+						      <h4>純HTML+JS網站設計</h4>
+                  <img src="image/demo_html.png" style="width:100%;">
+						    </div><!-- .collectionsBOX -->
+						  </a>
+						</div>
 					</li>
 					<li>
-						<div class="collectionsBOX" style="background: radial-gradient(circle at top right, transparent 20px, #fff 0) top right;">
-						  <h4>AMS實驗室網頁設計</h4>
-							<img src="image/demo_ams.png" style="width:100%;">
-						</div><!-- .collectionsBOX -->
+						<div class="collectionsBOX">
+						  <div class="collectionsblack collectionsblack_bottom collectionsblack_left collection_3"></div>
+						  <a href="http://amsdemo.phy.ncu.edu.tw/">
+						    <div class="collectionsPost collections_3">
+						      <h4>AMS實驗室網頁設計</h4>
+                  <img src="image/demo_ams.png" style="width:100%;">
+						    </div><!-- .collectionsBOX -->
+						  </a>
+						</div>
 					</li>
 					<li>
-						<div class="collectionsBOX" style="background: radial-gradient(circle at top left, transparent 20px, #fff 0) top left;">
-						  <h4>github程式分享</h4>
-							<div style="width:230px;margin:0 auto">
-							  <img id="my_github_icon" onmouseover="MyGit_ON(this)" onmouseout="MyGit_OUT(this)" src="image/github.svg" style="width:230px;">
-						  </div>
+						<div class="collectionsBOX">
+							<div class="collectionsblack collectionsblack_bottom collectionsblack_right collection_4"></div>
+							<a href="https://github.com/gra230434">
+								<div class="collectionsPost collections_4">
+									<h4>github程式分享</h4>
+									<div style="width:230px;margin:0 auto">
+									  <img id="my_github_icon" onmouseover="MyGit_ON(this)" onmouseout="MyGit_OUT(this)" src="image/github.svg" style="width:230px;">
+								  </div>
+								</div><!-- .collectionsBOX -->
+							</a>
 						</div><!-- .collectionsBOX -->
 					</li>
 				</ul>
 			</div>
-		</div><!-- .collections -->
+		</div><!-- .collections .resume_table -->
   </div><!-- resume -->
 
   <footer>
